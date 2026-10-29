@@ -27,17 +27,20 @@ class RestaurantMenuScreen extends StatelessWidget {
   static const List<Map<String, String>> foods = [
     {
       'name': 'Vegetable Pizza',
-      'description': 'Pizza topped with fresh vegetables.',
+      'emoji': '🍕',
+      'description': 'A delicious pizza topped with fresh vegetables.',
       'price': 'RM 15.00',
     },
     {
       'name': 'Chicken Pizza',
-      'description': 'Pizza topped with chicken and cheese.',
+      'emoji': '🍕',
+      'description': 'A tasty pizza topped with chicken and cheese.',
       'price': 'RM 18.00',
     },
     {
       'name': 'Cheese Pizza',
-      'description': 'Classic pizza loaded with cheese.',
+      'emoji': '🍕',
+      'description': 'A classic pizza loaded with melted cheese.',
       'price': 'RM 12.00',
     },
   ];
@@ -94,9 +97,9 @@ class RestaurantMenuScreen extends StatelessWidget {
                         color: const Color(0xFFFFB74D),
                         borderRadius: BorderRadius.circular(8),
                       ),
-                      child: const Text(
-                        '🍕',
-                        style: TextStyle(fontSize: 42),
+                      child: Text(
+                        food['emoji']!,
+                        style: const TextStyle(fontSize: 42),
                       ),
                     ),
                     const SizedBox(width: 8),
@@ -146,9 +149,9 @@ class FoodDetailScreen extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                const Text(
-                  '🍕',
-                  style: TextStyle(fontSize: 90),
+                Text(
+                  food['emoji']!,
+                  style: const TextStyle(fontSize: 90),
                 ),
                 const SizedBox(height: 16),
                 Text(
